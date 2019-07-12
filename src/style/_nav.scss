@@ -1,0 +1,46 @@
+nav {
+    background-color: white;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+    .container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+    ul {
+        display: flex;
+        a {
+            align-items: center;
+            color: $accent;
+            display: flex;
+            justify-content: center;
+            padding: 20px 30px;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                background-color: $accent;
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+    &.transparent {
+        background-color: transparent;
+        box-shadow: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        ul {
+            a {
+                color: white;
+                &:hover {
+                    background-color: white;
+                    color: $accent;
+                }
+            }
+        }
+    }
+    .logo {
+        width: 140px;
+    }
+}

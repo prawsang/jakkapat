@@ -10,6 +10,16 @@ export const fullWidthImage = graphql`
   }
 `
 
+export const fixed500 = graphql`
+  fragment fixed500 on File {
+    childImageSharp {
+      fixed(width: 500) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
+
 export const fixed250 = graphql`
   fragment fixed250 on File {
     childImageSharp {

@@ -31,6 +31,7 @@
     "react-helmet": "^5.2.0",
     "react-icons": "^3.5.0",
     "react-intl": "^2.9.0",
+    "react-scripts": "^3.0.1",
     "react-scroll": "^1.7.11"
   },
   "devDependencies": {

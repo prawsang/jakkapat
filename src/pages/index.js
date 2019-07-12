@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import keywords from "../data/keywords"
 
 const IndexPage = props => (
-  <Layout>
+  <Layout transparentNav={true}>
     <SEO title="Home" keywords={keywords} />
     <Home />
   </Layout>

@@ -10,17 +10,18 @@ import PropTypes from "prop-types"
 
 import "normalize.css/normalize.css"
 import "../style/index.scss"
-import logo from "../assets/logo_light.svg"
+
+import Nav from "../components/nav"
 
 class Layout extends React.Component {
   state = {
     showMenu: false,
   }
   render() {
+    const { transparentNav } = this.props;
     return (
       <div>
-        <h1>Hello World.</h1>
-        <img src={logo} alt="Logo" />
+        <Nav transparent={transparentNav} />
         {this.props.children}
       </div>
     )
