@@ -1,6 +1,8 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
+
 import Img from "gatsby-image"
+import BackgroundImage from 'gatsby-background-image'
 
 import Background from "../../assets/viet_noodle/hero_bg.svg"
 import HeroHead from "../../assets/viet_noodle/hero_head.svg"
@@ -13,10 +15,13 @@ const Hero = props => (
         header: file(relativePath: { eq: "viet_noodle/hero_img.png" }) {
           ...fullWidthImage
         }
+        background: file(relativePath: { eq: "viet_noodle/wood.png" }) {
+          ...fullWidthImage
+        }
       }
     `}
     render={data => (
-      <div className="hero-viet-noodle">
+      <BackgroundImage className="hero-viet-noodle" fluid={data.background.childImageSharp.fluid}>
         <div className="hero-background">
           <Background />
         </div>
@@ -30,7 +35,8 @@ const Hero = props => (
           />
           <HeroDet className="hero-details" />
         </div>
-      </div>
+        <div className="shadow" />
+      </BackgroundImage>
     )}
   />
 )
