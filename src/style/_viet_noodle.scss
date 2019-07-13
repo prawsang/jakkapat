@@ -62,8 +62,10 @@
         top: 10vh;
     }
     .chopping-board-image {
-        margin-left: -64px;
-        transform: rotateZ(10deg)
+        // margin-left: -64px;
+        max-width: 100%;
+        margin:auto;
+        // transform: rotateZ(10deg)
     }
     .ingr-item {
         margin-top: 100vh;
@@ -73,5 +75,94 @@
         background-image: url('../assets/viet_noodle/text_bg_1.png');
         background-repeat: no-repeat;
         color: #e7d5c9
+    }
+    .light-circle {
+        background-color: white;
+        border-radius: 50%;
+        box-shadow:0 0 20px 20px;
+        height: 100px;
+        left: 0;
+        mix-blend-mode: overlay;
+        position: absolute;
+        transition: all 0.5s ease-in-out;
+        top: 0;
+        width: 100px;
+    }
+    .phase-0 {
+        .light-1,.light-2 {
+            opacity: 0;
+            top: 0;
+            left: 0;
+            height: 100px;
+            width: 100px;
+        }
+        .light-1 {
+            left: 69%;
+            top: 16%;
+        }
+    }
+    .phase-1 {
+        .light-1 {
+            height: 25%;
+            left: 56%;
+            opacity: 1;
+            top: 16%;
+            width: 25%
+        }
+        .light-2 {
+            opacity: 0;
+            top: 0;
+            left: 0;
+            height: 100px;
+            width: 100px;
+        }
+    }
+    .phase-2 {
+        .light-1 {
+            height: 180px;
+            left: -7%;
+            opacity: 1;
+            top: 48%;
+            width: 180px;
+        }
+        .light-2 {
+            opacity: 0;
+            top: 0;
+            left: 0;
+            height: 100px;
+            width: 100px;
+        }
+    }
+    .phase-3 {
+        .light-1 {
+            height: 100px;
+            left: 38%;
+            opacity: 1;
+            top: 64%;
+            width: 100px;
+        }
+        .light-2 {
+            height: 100px;
+            left: 59%;
+            opacity: 1;
+            top: 48%;
+            width: 100px;
+        }
+    }
+    .phase-4 {
+         .light-1 {
+            height: 100px;
+            left: 30%;
+            opacity: 1;
+            top: 37%;
+            width: 100px;        
+        }
+        .light-2 {
+            height: 140px;
+            left: 25%;
+            opacity: 1;
+            top: 7%;
+            width: 140px;
+        }
     }
 }
