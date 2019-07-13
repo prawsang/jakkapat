@@ -56,16 +56,18 @@
 
 .ingr-viet-noodle {
     padding-top: 104px;
-
-    .chopping-board-image-wrapper {
-        position: sticky;
-        top: 10vh;
-    }
-    .chopping-board-image {
-        // margin-left: -64px;
-        max-width: 100%;
-        margin:auto;
-        // transform: rotateZ(10deg)
+    
+    .chopping-board {
+        margin-left: -64px;
+        .chopping-board-image-wrapper {
+            position: sticky;
+            top: 10vh;
+            transform: rotateZ(10deg);
+        }
+        .chopping-board-image {
+            max-width: 100%;
+            margin:auto;
+        }
     }
     .ingr-item {
         margin-top: 100vh;
@@ -76,90 +78,91 @@
         background-repeat: no-repeat;
         color: #e7d5c9
     }
+
+    // Lighting
     .light-circle {
         background-color: white;
         border-radius: 50%;
-        box-shadow:0 0 20px 20px;
+        box-shadow:0 0 20px 25px;
         height: 100px;
         left: 0;
         mix-blend-mode: overlay;
         position: absolute;
-        transition: all 0.5s ease-in-out;
+        transition: opacity 0.5s ease-in-out;
         top: 0;
         width: 100px;
     }
-    .phase-0 {
-        .light-1,.light-2 {
-            opacity: 0;
-            top: 0;
-            left: 0;
-            height: 25%;
-            width: 25%;
-        }
-        .light-1 {
-            top: 8%;
-            left: 66%;
-        }
+    .light-1,.light-2,.light-3,.light-4,.light-5,.light-6 {
+        opacity: 0;
+    }
+    .light-1 {
+        top: 8%;
+        left: 66%;
+        height: 25%;
+        width: 25%;
+    }
+    .light-2 {
+        height: 33%;
+        left: 10%;
+        top: 50%;
+        width: 33%;
+    }
+    .light-3 {
+        height: 17%;
+        left: 52%;
+        top: 65%;
+        width: 17%;
+    }
+    .light-4 {
+        height: 17%;
+        left: 67%;
+        top: 45%;
+        width: 17%;
+    }
+    .light-5 {
+        height: 17%;
+        left: 41%;
+        top: 37%;
+        width: 17%;
+    }
+    .light-6 {
+        height: 27%;
+        left: 30%;
+        top: 8%;
+        width: 27%;  
     }
     .phase-1 {
         .light-1 {
             opacity: 1;
-            top: 8%;
-            left: 66%;
-            height: 25%;
-            width: 25%;
         }
-        .light-2 {
+        .light-2, .light-3,.light-4,.light-5,.light-6 {
             opacity: 0;
         }
     }
     .phase-2 {
-        .light-1 {
-            height: 33%;
-            left: 10%;
-            opacity: 1;
-            top: 50%;
-            width: 33%;
-        }
         .light-2 {
+            opacity: 1;
+        }
+        .light-1, .light-3,.light-4,.light-5,.light-6 {
             opacity: 0;
-            top: 0;
-            left: 0;
-            height: 25%;
-            width: 25%;
         }
     }
     .phase-3 {
-        .light-1 {
-            height: 17%;
-            left: 52%;
+        .light-3, .light-4 {
             opacity: 1;
-            top: 65%;
-            width: 17%;
+            
         }
-        .light-2 {
-            height: 17%;
-            left: 67%;
-            opacity: 1;
-            top: 45%;
-            width: 17%;
+        .light-1, .light-2,.light-5,.light-6 {
+            opacity: 0;
         }
     }
     .phase-4 {
-         .light-1 {
-            height: 17%;
-            left: 41%;
-            opacity: 1;
-            top: 37%;
-            width: 17%;
-        }
-        .light-2 {
+         .light-5, .light-6 {
+             opacity: 1;
             
-            height: 27%;
-            left: 30%;
-            opacity: 1;
-            top: 8%;
-            width: 27%;  
+        }
+        .light-1, .light-2,.light-3,.light-4 {
+            opacity: 0;
         }
     }
 }

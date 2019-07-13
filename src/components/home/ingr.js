@@ -7,11 +7,12 @@ class Ingredients extends React.Component {
         return (
             <div className="ingr-viet-noodle">
                 <div className="container content">
-                    <div className="row is-ai-stretch">
+                    <h1 className="center" style={{ marginBottom: '128px' }}>ในซองมีอะไรบ้าง ?</h1>
+                    <div className="row is-ai-stretch is-jc-space-between">
                         <div className="col-6 col-has-padding chopping-board">
-                            <ChoppingBoard />  
+                            <ChoppingBoard />
                         </div>
-                        <div className="col-6 col-has-padding chopping-board">
+                        <div className="col-6 col-has-padding">
                             <div className="ingr-item texture-1 masked">
                                 <h1 style={{ color: 'white' }}>ผงปรุงน้ำซุป</h1>
                                 <h3 className="p masked-item">ผงปรุงน้ำซุปสกัดจากน้ำต้มกระดูก หมู รสน้ำซุปหวานน้ำต้มกระดูกหมู  กลมกล่อม หอมและเผ็ดร้อนด้วย พริกไทยดำ</h3>

@@ -26,7 +26,8 @@ class ChoppingBoard extends React.Component {
     state = {
         scroll: 0,
         top: 0,
-        pageHeight: 0
+        pageHeight: 0,
+        scale: 1
     }
     componentDidMount() {
         this.setState({
@@ -43,13 +44,18 @@ class ChoppingBoard extends React.Component {
     listenToScroll() {
         const pagePosition = window.pageYOffset;
         const scroll = pagePosition - this.state.top;
-
-        if (scroll > 0) {
-            this.setState({ scroll })
-        } else {
-            this.setState({ scroll: 0 })
+        const maxScroll = 4 * this.state.pageHeight - 1;
+        if (scroll < maxScroll) {
+            if (scroll > 0) {
+                this.setState({
+                    scroll,
+                    scale: (scroll * -0.1) / maxScroll + 1
+                })
+            } else {
+                this.setState({ scroll: 0 })
+            }
+            this.changeLights();
         }
-        this.changeLights();
     }
     changeLights() {
         const { scroll, pageHeight } = this.state;
@@ -58,11 +64,15 @@ class ChoppingBoard extends React.Component {
     }
     render() {
         return (
-            <div className={`chopping-board-image-wrapper ${this.changeLights()}`}>
+            <div className={`chopping-board-image-wrapper ${this.changeLights()}`} style={{ transform: `rotateZ(10deg) scale(${this.state.scale})` }}>
                 {/* <div className="chopping-board-image-wrapper"> */}
                 <Image name="choppingBoard" className="chopping-board-image" />
                 <div className="light-circle light-1" />
                 <div className="light-circle light-2" />
+                <div className="light-circle light-3" />
+                <div className="light-circle light-4" />
+                <div className="light-circle light-5" />
+                <div className="light-circle light-6" />
             </div>
         )
     }
