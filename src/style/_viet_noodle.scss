@@ -53,3 +53,25 @@
         right: 0;
     }
 }
+
+.ingr-viet-noodle {
+    padding-top: 104px;
+
+    .chopping-board-image-wrapper {
+        position: sticky;
+        top: 10vh;
+    }
+    .chopping-board-image {
+        margin-left: -64px;
+        transform: rotateZ(10deg)
+    }
+    .ingr-item {
+        margin-top: 100vh;
+        margin-bottom: 40vh;
+    }
+    .texture-1 {
+        background-image: url('../assets/viet_noodle/text_bg_1.png');
+        background-repeat: no-repeat;
+        color: #e7d5c9
+    }
+}
