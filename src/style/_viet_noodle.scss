@@ -93,76 +93,73 @@
             opacity: 0;
             top: 0;
             left: 0;
-            height: 100px;
-            width: 100px;
+            height: 25%;
+            width: 25%;
         }
         .light-1 {
-            left: 69%;
-            top: 16%;
+            top: 8%;
+            left: 66%;
         }
     }
     .phase-1 {
         .light-1 {
-            height: 25%;
-            left: 56%;
             opacity: 1;
-            top: 16%;
-            width: 25%
+            top: 8%;
+            left: 66%;
+            height: 25%;
+            width: 25%;
         }
         .light-2 {
             opacity: 0;
-            top: 0;
-            left: 0;
-            height: 100px;
-            width: 100px;
         }
     }
     .phase-2 {
         .light-1 {
-            height: 180px;
-            left: -7%;
+            height: 33%;
+            left: 10%;
             opacity: 1;
-            top: 48%;
-            width: 180px;
+            top: 50%;
+            width: 33%;
         }
         .light-2 {
             opacity: 0;
             top: 0;
             left: 0;
-            height: 100px;
-            width: 100px;
+            height: 25%;
+            width: 25%;
         }
     }
     .phase-3 {
         .light-1 {
-            height: 100px;
-            left: 38%;
+            height: 17%;
+            left: 52%;
             opacity: 1;
-            top: 64%;
-            width: 100px;
+            top: 65%;
+            width: 17%;
         }
         .light-2 {
-            height: 100px;
-            left: 59%;
+            height: 17%;
+            left: 67%;
             opacity: 1;
-            top: 48%;
-            width: 100px;
+            top: 45%;
+            width: 17%;
         }
     }
     .phase-4 {
          .light-1 {
-            height: 100px;
-            left: 30%;
+            height: 17%;
+            left: 41%;
             opacity: 1;
             top: 37%;
-            width: 100px;        
+            width: 17%;
         }
         .light-2 {
-            height: 140px;
-            left: 25%;
+            
+            height: 27%;
+            left: 30%;
             opacity: 1;
-            top: 7%;
-            width: 140px;
+            top: 8%;
+            width: 27%;  
         }
     }
 }

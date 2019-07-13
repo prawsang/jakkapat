@@ -53,7 +53,7 @@ class ChoppingBoard extends React.Component {
     }
     changeLights() {
         const { scroll, pageHeight } = this.state;
-        const phase = Math.floor(((scroll + pageHeight) / pageHeight));
+        const phase = Math.floor(((scroll + pageHeight - 1) / pageHeight));
         return "phase-" + (phase <= 4 ? phase : 4)
     }
     render() {
