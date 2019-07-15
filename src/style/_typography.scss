@@ -1,16 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit:400,700");
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Kanit", sans-serif;
   font-size: 12pt;
   font-weight: 400;
-}
-
-nav,
-footer {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", "Kanit", sans-serif;
 }
 
 .content {
@@ -21,7 +14,6 @@ footer {
   h5,
   h6 {
     font-weight: 400;
-    font-family: "Kanit", sans-serif;
     margin-bottom: 0.5em;
     &.p {
       line-height: 1.4;
@@ -31,7 +23,7 @@ footer {
   ol,
   ul {
     line-height: 1.4;
-    margin-bottom: 1.5em;
+    margin-bottom: 32px;
   }
   p:last-child,
   ol:last-child,
@@ -65,14 +57,14 @@ footer {
     font-weight: 700;
   }
   .image {
-    margin-bottom: 2em;
+    margin-bottom: 40px;
   }
   a:hover {
     color: $accent;
   }
   ol {
     list-style: decimal;
-    margin-left: 20px;
+    margin-left: 24px;
   }
   ul {
     list-style: circle;

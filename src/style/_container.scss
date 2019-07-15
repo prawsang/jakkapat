@@ -29,7 +29,7 @@
     padding: 40px;
   }
   &.rounded {
-    border-radius: 20px;
+    border-radius: 24px;
     box-sizing: border-box;
     padding: 40px;
   }
@@ -39,6 +39,10 @@
   }
   &.white {
     background-color: white;
+    color: $text;
+  }
+  &.no-overflow {
+    overflow-x: hidden;
   }
 }
 
@@ -46,13 +50,13 @@
   .container {
     width: 90%;
     &.has-padding {
-      padding: 20px;
+      padding: 24px;
     }
     &.full-width-xs {
       width: 100%;
     }
     &.rounded {
-      padding: 30px;
+      padding: 32px;
     }
   }
 }
@@ -90,18 +94,18 @@
   justify-content: space-between;
 }
 
-/* padding */
+/* columns */
 .row {
   display: flex;
   &.col-has-padding {
-    margin: 0 -15px;
+    margin: 0 -16px;
     & > .col {
-      padding: 15px;
+      padding: 16px;
     }
     &.wide-padding {
-      margin: 0 -30px;
+      margin: 0 -32px;
       & > .col {
-        padding: 30px;
+        padding: 32px;
       }
     }
   }
@@ -112,33 +116,19 @@
 @media screen and (max-width: 767px) {
   .row {
     &.col-has-padding {
-      margin: 0 -10px;
+      margin: 0 -8px;
       & > .col {
-        padding: 10px;
+        padding: 8px;
       }
       &.wide-padding {
-        margin: 0 -20px;
+        margin: 0 -24px;
         & > .col {
-          padding: 20px;
+          padding: 24px;
         }
       }
     }
   }
 }
-
-/* responsive */
-@media screen and (max-width: 767px) {
-  .is-hidden-xs {
-    display: none;
-  }
-}
-@media screen and (min-width: 768px) {
-  .is-hidden-sm {
-    display: none;
-  }
-}
-
-/* cols */
 .col-9 {
   flex-basis: 75%;
 }
@@ -160,6 +150,21 @@
   }
 }
 
+/* hide */
+.is-hidden {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .is-hidden-xs {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .is-hidden-sm {
+    display: none;
+  }
+}
+
 /* wrap */
 .wrapped {
   flex-wrap: wrap;
@@ -173,6 +178,101 @@ img {
   max-width: 100%;
 }
 
-.is-hidden {
-  display: none;
+/* tabs */ 
+.tabs {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  .dark .tab-item {
+    border: 2px solid white;
+    color: white;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    &.active {
+      background-color: white;
+      color: $text;
+      &:hover {
+        background-color: $text;
+      }
+    }
+  }
+  .tab-item, .white .tab-item {
+    border: 2px solid $text;
+    color: $text;
+    cursor: pointer;
+    padding: 16px 24px;
+    &:first-child {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+    &:last-child {
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+    &:hover {
+      background-color: rgba(24, 27, 31, 0.1);
+    }
+    &.active {
+      background-color: $text;
+      color: white;
+      &:hover {
+        background-color: $text;
+      }
+    }
+  }
+}
+
+/* badges */
+.badge {
+  align-items: center;
+  background-color: $text;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  font-size: 24px;
+  font-weight: bold;
+  height: 40px;
+  justify-content: center;
+  width: 40px;
+}
+
+/* dash */
+.dashed {
+  border-color: gray;
+  border-style: dashed;
+  border-width: 0;
+  &.top {
+    border-top-width: 1px;
+  }
+  &.left {
+    border-left-width: 1px;
+  }
+  &.right {
+    border-right-width: 1px;
+  }
+  &.bottom {
+    border-bottom-width: 1px;
+  }
+}
+
+/* other */
+.recipe {
+  .recipe-item {
+    text-align: left;
+    .col {
+      padding-bottom: 0 !important;
+    }
+    &:not(:last-child) {
+      border-bottom: 1px dashed gray;
+      .col {
+        padding-bottom: 24px !important;
+        padding-top: 24px !important;
+      }
+    }
+    .image {
+      margin-bottom: 0;
+      text-align: right;
+    }
+  }
 }

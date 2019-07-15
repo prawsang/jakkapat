@@ -5,7 +5,7 @@ import ChoppingBoard from "./choppingBoard"
 class Ingredients extends React.Component {
     render() {
         return (
-            <div className="ingr-viet-noodle">
+            <div className="ingr-viet-noodle section">
                 <div className="container content">
                     <h1 className="center" style={{ marginBottom: '128px' }}>ในซองมีอะไรบ้าง ?</h1>
                     <div className="row is-ai-stretch is-jc-space-between">
