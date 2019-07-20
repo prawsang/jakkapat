@@ -1,5 +1,5 @@
 .section {
-  margin-bottom: 60px;
+  margin-bottom: 128px;
 }
 
 .container {
@@ -182,7 +182,7 @@ img {
 .tabs {
   display: flex;
   justify-content: center;
-  list-style: none;
+  list-style: none !important;
   .dark .tab-item {
     border: 2px solid white;
     color: white;
