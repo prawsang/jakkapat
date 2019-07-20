@@ -1,102 +1,215 @@
+/* buttons */
+button, .white button {
+  background-color: $text;
+  border: none;
+  border-radius: 999px;
+  box-shadow: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.75em 1.5em;
+  transition: all 0.3s ease;
+  &:focus, &:active {
+    outline: none;
+  }
+  &:hover {
+    background-color: $accent;
+    color: white;
+  }
+}
+.dark, .gradient {
+  button {
+    background-color: white;
+    color: $text;
+  }
+}
+.dark {
+  button:hover {
+    background-color: $accent;
+    color: white;
+  }
+}
+.gradient {
+  button:hover {
+    background-color: $text;
+    color: white;
+  }
+}
+
 /* tabs */ 
 .tabs {
-    display: flex;
-    justify-content: center;
-    list-style: none !important;
-    .dark .tab-item {
-      border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  list-style: none !important;
+  .dark .tab-item {
+    border: 2px solid white;
+    color: white;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    &.active {
+      background-color: white;
+      color: $text;
+      &:hover {
+        background-color: $text;
+      }
+    }
+  }
+  .tab-item, .white .tab-item {
+    border: 2px solid $text;
+    color: $text;
+    cursor: pointer;
+    padding: 16px 24px;
+    &:first-child {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+    &:last-child {
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+    &:hover {
+      background-color: rgba(24, 27, 31, 0.1);
+    }
+    &.active {
+      background-color: $text;
       color: white;
       &:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-      }
-      &.active {
-        background-color: white;
-        color: $text;
-        &:hover {
-          background-color: $text;
-        }
+        background-color: $text;
       }
     }
-    .tab-item, .white .tab-item {
-      border: 2px solid $text;
-      color: $text;
+  }
+}
+
+/* badges */
+.badge {
+  align-items: center;
+  background-color: $text;
+  border-radius: 999px;
+  color: white;
+  display: flex;
+  font-size: 24px;
+  font-weight: bold;
+  height: 40px;
+  justify-content: center;
+  min-width: 40px;
+  &.red {
+    background-color: $danger
+  }
+}
+
+/* dropdown */
+.popup-wrapper {
+  display: inline-block;
+  position: relative;
+  &.active {
+    .popup, .popup-back {
+      display: block;
+    }
+  }
+  &.up {
+    .popup {
+      top: -20px;
+      left: 50%;
+      transform: translate(-50%, -100%);
+    }
+  }
+}
+.popup-back {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.popup {
+  position: absolute;
+  display: none;
+}
+.popup-content {
+  background-color: white;
+  border-radius: 24px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  position: relative;
+  .has-padding {
+    padding: 24px;
+  }
+  &::after {
+    border: 8px solid transparent;
+    border-top: 8px solid white;
+    bottom:-16px;
+    content: '';
+    left: calc(50% - 8px);
+    position: absolute;
+  }
+  h1,h2,h3,h4,h5,h6,p,small {
+    color: $text;
+    text-shadow: none !important;
+  }
+
+  /* order drop up */
+  &.order {
+    padding:4px;
+    width: 310px;
+    .social {
       cursor: pointer;
-      padding: 16px 24px;
-      &:first-child {
-        border-top-left-radius: 4px;
-        border-bottom-left-radius: 4px;
-      }
-      &:last-child {
-        border-top-right-radius: 4px;
-        border-bottom-right-radius: 4px;
+      flex-basis: 50%;
+      width: 50%;
+      padding: 24px;
+      transition: all 0.3s ease;
+    }
+    .icon {
+      display: block;
+      font-size: 48px;
+      margin: auto;
+      padding-bottom: 24px;
+    }
+    .fb {
+      border-radius: 20px 0 0 20px;
+      border-right: 1px dashed #cacaca;
+      .icon {
+        color: #3b5998;
       }
       &:hover {
-        background-color: rgba(24, 27, 31, 0.1);
+        background-color: #3b5998;
+        * {
+          color: white !important;
+        }
       }
-      &.active {
-        background-color: $text;
-        color: white;
-        &:hover {
-          background-color: $text;
+    }
+    .line {
+      border-radius: 0 20px 20px 0;
+      .icon {
+        color: #00c300;
+      }
+      &:hover {
+        background-color: #00c300;
+        * {
+          color: white !important;
         }
       }
     }
   }
-  
-  /* badges */
-  .badge {
-    align-items: center;
-    background-color: $text;
-    border-radius: 999px;
-    color: white;
-    display: flex;
-    font-size: 24px;
-    font-weight: bold;
-    height: 40px;
-    justify-content: center;
-    min-width: 40px;
-    &.red {
-      background-color: $danger
+}
+
+/* other */
+.recipe {
+  .recipe-item {
+    text-align: left;
+    .col {
+      padding-bottom: 0 !important;
     }
-  }
-  
-  /* dash */
-  .dashed {
-    border-color: gray;
-    border-style: dashed;
-    border-width: 0;
-    &.top {
-      border-top-width: 1px;
-    }
-    &.left {
-      border-left-width: 1px;
-    }
-    &.right {
-      border-right-width: 1px;
-    }
-    &.bottom {
-      border-bottom-width: 1px;
-    }
-  }
-  
-  /* other */
-  .recipe {
-    .recipe-item {
-      text-align: left;
+    &:not(:last-child) {
+      border-bottom: 1px dashed gray;
       .col {
-        padding-bottom: 0 !important;
-      }
-      &:not(:last-child) {
-        border-bottom: 1px dashed gray;
-        .col {
-          padding-bottom: 24px !important;
-          padding-top: 24px !important;
-        }
-      }
-      .image {
-        margin-bottom: 0;
-        text-align: right;
+        padding-bottom: 24px !important;
+        padding-top: 24px !important;
       }
     }
+    .image {
+      margin-bottom: 0;
+      text-align: right;
+    }
   }
+}
   

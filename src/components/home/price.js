@@ -2,6 +2,8 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
+import OrderButton from "../order";
+
 const Price = props => (
     <StaticQuery
         query={graphql`
@@ -19,7 +21,7 @@ const Price = props => (
                         className="packaging"
                     />
                     <h1>สั่งซื้อได้แล้ววันนี้</h1>
-                    <div className="row col-has-padding">
+                    <div className="row col-has-padding" style={{ marginBottom: 56 }}>
                         <div className="col col-3">
                             <div className="alpha rounded">
                                 <h5>1 ห่อ</h5>
@@ -50,6 +52,7 @@ const Price = props => (
                             </div>
                         </div>
                     </div>
+                    <OrderButton />
                 </div>
             </section>
         )}

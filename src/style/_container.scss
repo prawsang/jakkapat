@@ -194,3 +194,22 @@ img {
   max-width: 100%;
 }
 
+/* dash */
+.dashed {
+  border-color: gray;
+  border-style: dashed;
+  border-width: 0;
+  &.top {
+    border-top-width: 1px;
+  }
+  &.left {
+    border-left-width: 1px;
+  }
+  &.right {
+    border-right-width: 1px;
+  }
+  &.bottom {
+    border-bottom-width: 1px;
+  }
+}
+
