@@ -166,3 +166,27 @@
         }
     }
 }
+
+.price {
+    .packaging {
+        margin: auto;
+        top: -64px; 
+        margin-bottom: -40px; 
+        max-width: 200px
+    }
+    h1,h2,h3,h4,h5,h6,p {
+        text-shadow: 0 4px 6px rgba(0,0,0,0.5);
+        position: relative;
+    }
+    .highlight {
+        box-shadow: 0 0 20px rgba(255,255,255,0.5);
+        position: relative;
+        .badge {
+            font-weight: normal;
+            position: absolute;
+            top: -24px;
+            left: -24px;
+            padding: 8px 16px;
+        }
+    }
+}

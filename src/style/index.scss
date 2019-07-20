@@ -4,6 +4,7 @@
 @import "typography";
 @import "container";
 
+@import "elements";
 @import "nav";
 
 @import "viet_noodle";
@@ -22,9 +23,9 @@ body {
   width: 100%;
 }
 
-::selection {
-  background: $accent-light; /* WebKit/Blink Browsers */
-}
-::-moz-selection {
-  background: $accent-light; /* Gecko Browsers */
-}
+// ::selection {
+//   background: $accent-light; /* WebKit/Blink Browsers */
+// }
+// ::-moz-selection {
+//   background: $accent-light; /* Gecko Browsers */
+// }
