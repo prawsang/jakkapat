@@ -11,10 +11,24 @@ const Price = props => (
           packaging: file(relativePath: { eq: "viet_noodle/packaging.png" }) {
             ...fullWidthImage
           }
+          header: file(relativePath: { eq: "viet_noodle/hero_img_2.png" }) {
+            ...fullWidthImage
+          }
         }
       `}
         render={data => (
             <section className="price section container full-width gradient">
+                <Img
+                    fluid={data.header.childImageSharp.fluid}
+                    style={{
+                        width: '90%',
+                        maxWidth: 500,
+                        position: 'absolute',
+                        left: '50%',
+                        bottom: 0,
+                        transform: 'translate(-60%,10%)'
+                    }}
+                />
                 <div className="container content center" style={{ paddingBottom: 64 }}>
                     <Img
                         fluid={data.packaging.childImageSharp.fluid}

@@ -65,7 +65,7 @@ const InstItem = ({ image, order, children, last }) => (
             <div className="badge">{order}</div>
         </div>
         <div className={`col col-${image ? '8' : '10'}`}>
-            <p className="larger">
+            <p style={{ fontSize: '1.2em' }}>
                 {children}
             </p>
         </div>
