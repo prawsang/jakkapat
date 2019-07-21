@@ -12,6 +12,7 @@ import "normalize.css/normalize.css"
 import "../style/index.scss"
 
 import Nav from "../components/nav"
+import Footer from "../components/footer"
 
 class Layout extends React.Component {
   state = {
@@ -20,10 +21,11 @@ class Layout extends React.Component {
   render() {
     const { transparentNav } = this.props;
     return (
-      <div>
+      <React.Fragment>
         <Nav transparent={transparentNav} />
         {this.props.children}
-      </div>
+        <Footer />
+      </React.Fragment>
     )
   }
 }

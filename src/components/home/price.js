@@ -17,7 +17,7 @@ const Price = props => (
         }
       `}
         render={data => (
-            <section className="price section container full-width gradient">
+            <section className="no-mb price section container full-width gradient">
                 <Img
                     fluid={data.header.childImageSharp.fluid}
                     style={{

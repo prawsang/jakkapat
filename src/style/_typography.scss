@@ -80,9 +80,12 @@ body {
   }
 }
 
+/* font size */
 .larger {
   font-size: 1.4em;
 }
+
+/* text align */
 .center {
   text-align: center;
   .image,
@@ -91,11 +94,20 @@ body {
     margin-right: auto;
   }
 }
+.right {
+  text-align: right;
+}
 @media screen and (max-width: 767px) {
   .center-xs {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+  }
+  .right-xs {
+    text-align: right;
+  }
+  .left-xs {
+    text-align: left;
   }
 }
 
@@ -107,6 +119,7 @@ body {
   padding-bottom: 0 !important;
 }
 
+/* links/hover */
 a {
   color: inherit;
   text-decoration: inherit;

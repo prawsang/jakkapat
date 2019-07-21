@@ -35,6 +35,22 @@ button, .white button {
   }
 }
 
+/* social icons */
+.icon.fb {
+  font-size: 32px;
+  color: $text;
+  &:hover {
+      color: $fb;
+  }
+}
+.icon.line {
+  font-size: 32px;
+  color: $text;
+  &:hover {
+      color: $line;
+  }
+}
+
 /* tabs */ 
 .tabs {
   display: flex;
@@ -129,7 +145,7 @@ button, .white button {
 .popup-content {
   background-color: white;
   border-radius: 24px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.3);
   position: relative;
   .has-padding {
     padding: 24px;
@@ -168,10 +184,10 @@ button, .white button {
       border-radius: 20px 0 0 20px;
       border-right: 1px dashed #cacaca;
       .icon {
-        color: #3b5998;
+        color: $fb;
       }
       &:hover {
-        background-color: #3b5998;
+        background-color: $fb;
         * {
           color: white !important;
         }
@@ -180,10 +196,10 @@ button, .white button {
     .line {
       border-radius: 0 20px 20px 0;
       .icon {
-        color: #00c300;
+        color: $line;
       }
       &:hover {
-        background-color: #00c300;
+        background-color: $line;
         * {
           color: white !important;
         }
