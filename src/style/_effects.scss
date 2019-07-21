@@ -1,0 +1,93 @@
+/* sticky */
+.sticky-scroll {
+    .sticky-image-wrapper {
+        position: sticky;
+        .image {
+            margin-bottom: 0;
+        }
+    }
+    .page {
+        margin-top: 100vh;
+        margin-bottom: 40vh;
+    }
+}
+
+/* lights */
+.light-circle {
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:0 0 20px 25px;
+    height: 100px;
+    left: 0;
+    mix-blend-mode: overlay;
+    position: absolute;
+    transition: opacity 0.5s ease-in-out;
+    top: 0;
+    width: 100px;
+}
+
+/* shadow at bottom */
+.bottom-shadow {
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
+    bottom: 0;
+    height: 300px;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+
+/* absolute */
+.is-absolute {
+    position: absolute !important;
+    &.x-center {
+        left: 50%;
+        transform: translateX(-50%)
+    }
+    &.y-center {
+        top: 50%;
+        transform: translateY(-50%)
+    }
+    &.xy-center {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    &.top {
+        top: 0;
+    }
+    &.left {
+        left: 0
+    }
+    &.right {
+        right: 0;
+    }
+    &.bottom {
+        bottom: 0;
+    }
+}
+
+/* negative margin */
+.neg-t-64 {
+    top: -64px !important;
+}
+.neg-t-40 {
+    top: -40px !important;
+}
+.neg-b-64 {
+    bottom: -64px !important;
+}
+.neg-b-40 {
+    bottom: -40px !important;
+}
+.neg-mt-64 {
+    margin-top: -64px !important;
+}
+.neg-mt-40 {
+    margin-top: -40px !important;
+}
+.neg-mb-64 {
+    margin-bottom: -64px !important;
+}
+.neg-mb-40 {
+    margin-bottom: -40px !important;
+}

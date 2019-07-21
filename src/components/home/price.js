@@ -20,22 +20,21 @@ const Price = props => (
             <section className="no-mb price section container full-width gradient">
                 <Img
                     fluid={data.header.childImageSharp.fluid}
+                    className="is-absolute center x-center bottom neg-b-40"
                     style={{
                         width: '90%',
                         maxWidth: 500,
-                        position: 'absolute',
-                        left: '50%',
-                        bottom: 0,
-                        transform: 'translate(-60%,10%)'
+                        transform: 'translateX(-60%)'
                     }}
                 />
                 <div className="container content center" style={{ paddingBottom: 64 }}>
                     <Img
                         fluid={data.packaging.childImageSharp.fluid}
-                        className="packaging"
+                        style={{ maxWidth: 200 }}
+                        className="image is-relative neg-t-64 neg-mb-40"
                     />
-                    <h1>สั่งซื้อได้แล้ววันนี้</h1>
-                    <div className="row col-has-padding" style={{ marginBottom: 56 }}>
+                    <h1 className="has-text-shadow">สั่งซื้อได้แล้ววันนี้</h1>
+                    <div className="row col-has-padding has-text-shadow" style={{ marginBottom: 56 }}>
                         <div className="col col-3">
                             <div className="alpha rounded">
                                 <h5>1 ห่อ</h5>
@@ -44,8 +43,8 @@ const Price = props => (
                             </div>
                         </div>
                         <div className="col col-3">
-                            <div className="alpha rounded larger highlight">
-                                <div className="badge red">คุ้มสุดๆ</div>
+                            <div className="alpha rounded larger highlight is-relative">
+                                <div className="badge text normal red corner no-text-shadow">คุ้มสุดๆ</div>
                                 <h5>3 ห่อ</h5>
                                 <h1 className="no-mb">100</h1>
                                 <p>บาท</p>

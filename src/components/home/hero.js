@@ -21,21 +21,19 @@ const Hero = props => (
       }
     `}
     render={data => (
-      <BackgroundImage className="hero-viet-noodle" fluid={data.background.childImageSharp.fluid}>
+      <BackgroundImage className="hero-viet-noodle dark" fluid={data.background.childImageSharp.fluid}>
         <div className="hero-background">
           <Background />
         </div>
-        <div className="container narrow">
-          <div className="hero-head">
-            <HeroHead className="hero-head" />
-          </div>
+        <div className="container narrow center padding-top is-relative">
+          <HeroHead className="hero-head image" />
           <Img
             fluid={data.header.childImageSharp.fluid}
-            className="hero-image"
+            className="image hero-image"
           />
-          <HeroDet className="hero-details" />
+          <HeroDet className="image hero-details" />
         </div>
-        <div className="shadow" />
+        <div className="bottom-shadow" />
       </BackgroundImage>
     )}
   />

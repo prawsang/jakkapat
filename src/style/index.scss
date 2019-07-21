@@ -5,6 +5,7 @@
 @import "container";
 
 @import "elements";
+@import "effects";
 @import "nav";
 
 @import "viet_noodle";
@@ -22,10 +23,3 @@ body {
   overflow-x: hidden;
   width: 100%;
 }
-
-// ::selection {
-//   background: $accent-light; /* WebKit/Blink Browsers */
-// }
-// ::-moz-selection {
-//   background: $accent-light; /* Gecko Browsers */
-// }

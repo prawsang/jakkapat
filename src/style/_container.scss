@@ -1,6 +1,9 @@
 .section {
   margin-bottom: 128px;
 }
+.is-relative {
+  position: relative;
+}
 
 .container {
   box-sizing: border-box;
@@ -24,37 +27,58 @@
     width: 100%;
     max-width: initial;
   }
+  &.padding-top {
+    margin-top: 96px;
+  }
+}
 
-  &.has-padding {
-    padding: 40px;
+/* div appearance */
+.highlight {
+  box-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+.has-padding {
+  padding: 40px;
+}
+.rounded {
+  border-radius: 24px;
+  box-sizing: border-box;
+  padding: 40px;
+}
+.dark {
+  background-color: $dark;
+  color: white;
+  .alpha {
+    background-color: rgba(255,255,255,0.5);
   }
-  &.rounded {
-    border-radius: 24px;
-    box-sizing: border-box;
-    padding: 40px;
+}
+.white {
+  background-color: white;
+  color: $text;
+  .alpha {
+    background-color: rgba(0,0,0,0.5);
   }
-  &.dark {
-    background-color: $dark;
-    color: white;
-    .alpha {
-      background-color: rgba(255,255,255,0.5);
-    }
+}
+.gradient {
+  background-image: radial-gradient(circle, $accent-light, $accent);
+  .alpha {
+    background-color: rgba(0,0,0,0.5);
   }
-  &.white {
-    background-color: white;
-    color: $text;
-    .alpha {
-      background-color: rgba(0,0,0,0.5);
-    }
+}
+.dashed {
+  border-color: gray;
+  border-style: dashed;
+  border-width: 0;
+  &.top {
+    border-top-width: 1px;
   }
-  &.gradient {
-    background-image: radial-gradient(circle, $accent-light, $accent);
-    .alpha {
-      background-color: rgba(0,0,0,0.5);
-    }
+  &.left {
+    border-left-width: 1px;
   }
-  &.no-overflow {
-    overflow-x: hidden;
+  &.right {
+    border-right-width: 1px;
+  }
+  &.bottom {
+    border-bottom-width: 1px;
   }
 }
 
@@ -160,9 +184,17 @@
 .col-3 {
   flex-basis: 25%;
 }
-@media screen and (max-width: 767px) {
-  .row {
+@media screen and (max-width: 440px) {
+  .row.row-xxs {
     display: block;
+  }
+}
+@media screen and (max-width: 767px) {
+  .row-xs, .row {
+    display: block;
+  }
+  .row.row-xxs {
+    display: flex;
   }
 }
 
@@ -187,29 +219,10 @@
 }
 
 /* image containers */
-.rounded img {
+img.img-rounded {
   border-radius: 50%;
 }
 img {
   max-width: 100%;
-}
-
-/* dash */
-.dashed {
-  border-color: gray;
-  border-style: dashed;
-  border-width: 0;
-  &.top {
-    border-top-width: 1px;
-  }
-  &.left {
-    border-left-width: 1px;
-  }
-  &.right {
-    border-right-width: 1px;
-  }
-  &.bottom {
-    border-bottom-width: 1px;
-  }
 }
 

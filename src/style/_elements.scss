@@ -111,6 +111,14 @@ button, .white button {
   &.red {
     background-color: $danger
   }
+  &.corner {
+    position: absolute;
+    top: -24px;
+    left: -24px;
+  }
+  &.text {
+    padding: 8px 16px;
+  }
 }
 
 /* dropdown */

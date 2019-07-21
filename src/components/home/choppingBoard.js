@@ -64,9 +64,8 @@ class ChoppingBoard extends React.Component {
     }
     render() {
         return (
-            <div className={`chopping-board-image-wrapper ${this.changeLights()}`} style={{ transform: `rotateZ(10deg) scale(${this.state.scale})` }}>
-                {/* <div className="chopping-board-image-wrapper"> */}
-                <Image name="choppingBoard" className="chopping-board-image" />
+            <div className={`sticky-image-wrapper center chopping-board-image-wrapper ${this.changeLights()}`} style={{ transform: `rotateZ(10deg) scale(${this.state.scale})` }}>
+                <Image name="choppingBoard" className="chopping-board-image image" />
                 <div className="light-circle light-1" />
                 <div className="light-circle light-2" />
                 <div className="light-circle light-3" />

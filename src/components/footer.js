@@ -10,7 +10,7 @@ const Footer = () => (
         <div className="container content is-flex is-jc-space-between">
             <div>
                 <Logo style={{ width: 120, height: 'auto', marginBottom: 8 }} />
-                <p className="gray no-mb" style={{ fontSize: '0.8em', lineHeight: 1.3 }}>หสม.ไทยฟู๊ดซัพพลาย <br />
+                <p className="gray no-mb smaller">หสม.ไทยฟู๊ดซัพพลาย <br />
                     98 ซ.ประชาราษฎร์ 3 แยก 1 ถ.ประชาราษฎร์ <br />
                     ต.ตลาดขวัญ อ.เมือง จ.นนทบุรี  <br />
                     11000 ประเทศไทย <br /><br />

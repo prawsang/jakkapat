@@ -1,5 +1,4 @@
 .hero-viet-noodle {
-    background-color: $text;
     .hero-background {
         bottom: 40%;
         left: 0;
@@ -8,35 +7,18 @@
         top: 0;
         width: 100%;
     }
-    .container {
-        margin-top: 96px;
-        text-align: center;
-        position: relative;
-    }
-    .hero-head,
-    .hero-image,
-    .hero-details {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 100%;
-    }
-    .hero-head-text,
-    .hero-details {
-        color: white;
-    }
     .hero-head {
-        margin-bottom: -96px;
+        margin-bottom: -96px !important;
+        max-width: 600px;
         position: relative;
         z-index: 10;
-        .hero-head-text {
-            width: 600px;
-        }
     }
     .hero-image {
         position: relative;
         left: -10%;
-        z-index: 20;
         margin-bottom: -96px;
+        margin-top: -96px;
+        z-index: 20;
     }
     .hero-details {
         position: relative;
@@ -44,34 +26,17 @@
         width: 400px;
         z-index: 20;
     }
-    .shadow {
-        background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.3));
-        bottom: 0;
-        height: 300px;
-        left: 0;
-        position: absolute;
-        right: 0;
-    }
+    
 }
 
 .ingr-viet-noodle {
     padding-top: 104px;
-    
     .chopping-board {
         margin-left: -64px;
         .chopping-board-image-wrapper {
-            position: sticky;
             top: 10vh;
             transform: rotateZ(10deg);
         }
-        .chopping-board-image {
-            max-width: 100%;
-            margin:auto;
-        }
-    }
-    .ingr-item {
-        margin-top: 100vh;
-        margin-bottom: 40vh;
     }
     .texture-1 {
         background-image: url('../assets/viet_noodle/text_bg_1.png');
@@ -80,18 +45,6 @@
     }
 
     // Lighting
-    .light-circle {
-        background-color: white;
-        border-radius: 50%;
-        box-shadow:0 0 20px 25px;
-        height: 100px;
-        left: 0;
-        mix-blend-mode: overlay;
-        position: absolute;
-        transition: opacity 0.5s ease-in-out;
-        top: 0;
-        width: 100px;
-    }
     .light-1,.light-2,.light-3,.light-4,.light-5,.light-6 {
         opacity: 0;
     }
@@ -163,30 +116,6 @@
         }
         .light-1, .light-2,.light-3,.light-4 {
             opacity: 0;
-        }
-    }
-}
-
-.price {
-    .packaging {
-        margin: auto;
-        top: -64px; 
-        margin-bottom: -40px; 
-        max-width: 200px
-    }
-    h1,h2,h3,h4,h5,h6,p {
-        text-shadow: 0 4px 6px rgba(0,0,0,0.5);
-        position: relative;
-    }
-    .highlight {
-        box-shadow: 0 0 20px rgba(255,255,255,0.5);
-        position: relative;
-        .badge {
-            font-weight: normal;
-            position: absolute;
-            top: -24px;
-            left: -24px;
-            padding: 8px 16px;
         }
     }
 }
