@@ -1,12 +1,20 @@
 nav {
     background-color: white;
-    box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 0 24px 0 rgba(0,0,0,0.1);
     .container {
         align-items: center;
         display: flex;
         justify-content: space-between;
     }
-    ul {
+    .popup-back {
+        display: none;
+    }
+    .hamburger {
+        display: none;
+        float: left;
+        font-size: 24px;
+    }
+    ul.nav-menu {
         display: flex;
         a {
             align-items: center;
@@ -30,7 +38,7 @@ nav {
         left: 0;
         right: 0;
         z-index: 999;
-        ul {
+        ul.nav-menu {
             a {
                 color: white;
                 &:hover {
@@ -39,9 +47,64 @@ nav {
                 }
             }
         }
+        .hamburger {
+            color: white;
+        }
     }
     .logo {
         width: 140px;
+    }
+}
+@media screen and (max-width: 768px) {
+    nav, nav.transparent {
+        .container {
+            display: block;
+            text-align: center;
+        }
+        ul.nav-menu {
+            background-color: white;
+            bottom: 0;
+            box-shadow: 0 0 24px 0 rgba(0,0,0,0.1);
+            display: block;
+            left: -100%;
+            position: fixed;
+            padding-bottom: 40px;
+            padding-top: 40px;
+            transition: left 0.3s ease;
+            top: 0;
+            width:  80%;
+            a {
+                box-sizing: border-box;
+                color: $text;
+                display: block;
+                padding: 16px;
+                text-align: left;
+                width: 100%;
+                &:hover {
+                    color: white;
+                    background-color: $accent;
+                }
+            }
+        }
+        &.active {
+            .popup-back {
+                display: block;
+            }
+            ul.nav-menu {
+                left: 0;
+            }
+        }
+        .logo {
+            margin: auto;
+            padding: 8px 0;
+        }
+        .hamburger {
+            display: block;
+            left: 0;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
 }
 

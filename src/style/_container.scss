@@ -184,17 +184,17 @@
 .col-3 {
   flex-basis: 25%;
 }
-@media screen and (max-width: 440px) {
-  .row.row-xxs {
-    display: block;
-  }
-}
 @media screen and (max-width: 767px) {
   .row-xs, .row {
     display: block;
   }
   .row.row-xxs {
     display: flex;
+  }
+}
+@media screen and (max-width: 440px) {
+  .row.row-xxs {
+    display: block;
   }
 }
 

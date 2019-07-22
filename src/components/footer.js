@@ -17,7 +17,7 @@ const Footer = () => (
                     โทร 02-526-5480
                 </p>
             </div>
-            <div className="right">
+            <div className="right" style={{ whiteSpace: 'nowrap' }}>
                 <p style={{ marginBottom: 16 }}>ติดตามเรา</p>
                 <a><FontAwesomeIcon icon={faFacebookSquare} className="icon fb" /></a>
             </div>
