@@ -61,7 +61,7 @@ export default Instructions;
 
 const InstItem = ({ image, order, children, last }) => (
     <div className={`row recipe-item col-has-padding`}>
-        <div className="col col-2">
+        <div className="col col-2 center-xs">
             <div className="badge">{order}</div>
         </div>
         <div className={`col col-${image ? '8' : '10'}`}>
@@ -70,7 +70,7 @@ const InstItem = ({ image, order, children, last }) => (
             </p>
         </div>
         {image && (
-            <div className="col col-2">
+            <div className="col col-2 center-xs">
                 <img src={image} className="image" alt="" style={{ maxWidth: 112 }} />
             </div>
         )}

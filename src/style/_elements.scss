@@ -98,16 +98,13 @@ button, .white button {
 
 /* badges */
 .badge {
-  align-items: center;
   background-color: $text;
   border-radius: 999px;
   color: white;
-  display: flex;
+  display: inline-block;
   font-size: 24px;
   font-weight: bold;
-  height: 40px;
-  justify-content: center;
-  min-width: 40px;
+  padding: 8px 16px;
   &.red {
     background-color: $danger
   }
@@ -117,7 +114,7 @@ button, .white button {
     left: -24px;
   }
   &.text {
-    padding: 8px 16px;
+    padding: 16px 24px;
   }
 }
 
@@ -236,4 +233,20 @@ button, .white button {
     }
   }
 }
+@media screen and (max-width:767px) {
+  .recipe .recipe-item {
+    .col:not(:first-child) {
+      padding-top: 0 !important;
+    }
+    &:last-child {
+      .col {
+        padding-top: 24px !important;
+      }
+    }
+    .image {
+      margin-bottom: 0;
+      text-align: right;
+    }
+  }
+} 
   

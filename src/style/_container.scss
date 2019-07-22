@@ -27,9 +27,6 @@
     width: 100%;
     max-width: initial;
   }
-  &.padding-top {
-    margin-top: 96px;
-  }
 }
 
 /* div appearance */
@@ -142,6 +139,12 @@
       margin: 0 -32px;
       & > .col {
         padding: 32px;
+      }
+    }
+    &.small-padding {
+      margin: 0 -8px;
+      & > .col {
+        padding: 8px;
       }
     }
   }

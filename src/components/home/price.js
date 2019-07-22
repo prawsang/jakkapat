@@ -20,11 +20,11 @@ const Price = props => (
             <section className="no-mb price section container full-width gradient">
                 <Img
                     fluid={data.header.childImageSharp.fluid}
-                    className="is-absolute center x-center bottom neg-b-40"
+                    className="is-absolute center x-center bottom neg-b-32"
                     style={{
                         width: '90%',
                         maxWidth: 500,
-                        transform: 'translateX(-60%)'
+                        transform: 'translateX(-58%)'
                     }}
                 />
                 <div className="container content center" style={{ paddingBottom: 64 }}>
@@ -33,8 +33,8 @@ const Price = props => (
                         style={{ maxWidth: 200 }}
                         className="image is-relative neg-t-64 neg-mb-40"
                     />
-                    <h1 className="has-text-shadow">สั่งซื้อได้แล้ววันนี้</h1>
-                    <div className="row col-has-padding has-text-shadow" style={{ marginBottom: 56 }}>
+                    <h1 className="has-text-shadow" style={{ marginBottom: 40 }}>สั่งซื้อได้แล้ววันนี้</h1>
+                    <div className="row col-has-padding small-padding has-text-shadow" style={{ margin: 'auto', marginBottom: 56, width: '90%' }}>
                         <div className="col col-3">
                             <div className="alpha rounded">
                                 <h5>1 ห่อ</h5>
