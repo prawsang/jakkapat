@@ -41,11 +41,21 @@
 
 .ingr-viet-noodle {
     padding-top: 104px;
-    .chopping-board {
+    .chopping-board-scroll {
+        position: relative;
         margin-left: -64px;
+        .chopping-board {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin-top: 50%;
+            margin-bottom: -50%;
+        }
         .chopping-board-image-wrapper {
-            top: 10vh;
-            transform: rotateZ(10deg);
+            top: 50%;
+            transform: rotate(10deg) translate(-64px,-50%);
         }
     }
     .texture-1 {
@@ -55,6 +65,9 @@
     }
 
     // Lighting
+    .light-circle {
+        box-shadow:0 0 2em 2.25em;
+    }
     .light-1,.light-2,.light-3,.light-4,.light-5,.light-6 {
         opacity: 0;
     }
@@ -127,5 +140,56 @@
         .light-1, .light-2,.light-3,.light-4 {
             opacity: 0;
         }
+    }
+    .sticky-scroll {
+        .page:last-child {
+            margin-bottom: 10vw;
+        }
+    }
+}
+@media screen and (max-width:991px) {
+    .ingr-viet-noodle .chopping-board-scroll {
+        .chopping-board {
+            .chopping-board-image-wrapper {
+                transform: rotate(10deg) translate(0,-50%);
+            }
+        }
+    }
+}
+@media screen and (max-width:767px) {
+    .ingr-viet-noodle .chopping-board-scroll {
+        .chopping-board {
+            margin-left: 0;
+            .chopping-board-image-wrapper {
+                transform: rotate(10deg);
+                margin: auto;
+                width: 90%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 440px) {
+    .ingr-viet-noodle .chopping-board-scroll {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-left: 0;
+        display: flex;
+        align-items: stretch;
+        .chopping-board {
+            margin-top: 0;
+            margin-bottom: 160px;
+            position: relative;
+            width: 100%;
+            .chopping-board-image-wrapper {
+                top: 5vh;
+                width: 80%;
+            }
+        }
+    }
+    .ingr-viet-noodle .light-circle {
+        box-shadow:0 0 1.25em 1.75em;
     }
 }

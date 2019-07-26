@@ -7,8 +7,11 @@
         }
     }
     .page {
-        margin-top: 100vh;
-        margin-bottom: 40vh;
+        align-items: flex-end;
+        display: flex;
+        height: 100vh;
+        z-index: 99;
+
     }
 }
 

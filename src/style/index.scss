@@ -13,11 +13,11 @@
 html {
   width: 100vw;
 }
-@media screen and (max-width: 767px) {
-  html {
-    overflow-x: hidden;
-  }
-}
+// @media screen and (max-width: 767px) {
+//   html {
+//     overflow-x: hidden;
+//   }
+// }
 body {
   min-height: 100vh;
   overflow-x: hidden;
