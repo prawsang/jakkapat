@@ -19,7 +19,7 @@ const Footer = () => (
             </div>
             <div className="right" style={{ whiteSpace: 'nowrap' }}>
                 <p style={{ marginBottom: 16 }}>ติดตามเรา</p>
-                <a href="https://www.facebook.com/jakkapat.thaifood/" target="_blank"><FontAwesomeIcon icon={faFacebookSquare} className="icon fb" /></a>
+                <a href="https://www.facebook.com/jakkapat.thaifood/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebookSquare} className="icon fb" /></a>
             </div>
         </div>
     </footer>
