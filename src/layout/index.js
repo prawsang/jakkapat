@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 
 import "normalize.css/normalize.css"
 import "../style/index.scss"
+import 'sal.js/dist/sal.css';
 
 import Nav from "../components/nav"
 import Footer from "../components/footer"

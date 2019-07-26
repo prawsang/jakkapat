@@ -34,15 +34,21 @@ const Price = props => (
                         className="image is-relative neg-t-64 neg-mb-40"
                     />
                     <h1 className="has-text-shadow" style={{ marginBottom: 40 }}>สั่งซื้อได้แล้ววันนี้</h1>
-                    <div className="row col-has-padding small-padding has-text-shadow width-90-xs" style={{ margin: 'auto auto 56' }}>
-                        <div className="col col-3">
+                    <div className="row col-has-padding small-padding has-text-shadow width-90-xs"
+                        style={{ margin: 'auto', marginBottom: 56 }}
+                    >
+                        <div className="col col-3" data-sal="slide-up"
+                            data-sal-delay="300"
+                            data-sal-easing="ease-out-bounce">
                             <div className="alpha rounded">
                                 <h5>1 ห่อ</h5>
                                 <h1 className="no-mb">35</h1>
                                 <p>บาท</p>
                             </div>
                         </div>
-                        <div className="col col-3">
+                        <div className="col col-3" data-sal="slide-up"
+                            data-sal-delay="300"
+                            data-sal-easing="ease-out-bounce">
                             <div className="alpha rounded larger highlight is-relative">
                                 <div className="badge text normal red corner no-text-shadow">คุ้มสุดๆ</div>
                                 <h5>3 ห่อ</h5>
@@ -50,14 +56,18 @@ const Price = props => (
                                 <p>บาท</p>
                             </div>
                         </div>
-                        <div className="col col-3">
+                        <div className="col col-3" data-sal="slide-up"
+                            data-sal-delay="300"
+                            data-sal-easing="ease-out-bounce">
                             <div className="alpha rounded">
                                 <h5>10 ห่อ</h5>
                                 <h1 className="no-mb">300</h1>
                                 <p>บาท</p>
                             </div>
                         </div>
-                        <div className="col col-3">
+                        <div className="col col-3" data-sal="slide-up"
+                            data-sal-delay="300"
+                            data-sal-easing="ease-out-bounce">
                             <div className="alpha rounded">
                                 <h5>20 ห่อ</h5>
                                 <h1 className="no-mb">600</h1>

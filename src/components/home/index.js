@@ -5,15 +5,24 @@ import Ingredients from "./ingr"
 import Instructions from "./instructions";
 import Price from "./price";
 
-const HomePage = () => (
-  <React.Fragment>
-    <Hero />
-    <main className="container full-width dark">
-      <Ingredients />
-      <Instructions />
-      <Price />
-    </main>
-  </React.Fragment>
-)
+import sal from 'sal.js'
+
+class HomePage extends React.Component {
+  componentDidMount() {
+    sal();
+  }
+  render() {
+    return (
+      <React.Fragment>
+        <Hero />
+        <main className="container full-width dark">
+          <Ingredients />
+          <Instructions />
+          <Price />
+        </main>
+      </React.Fragment>
+    )
+  }
+}
 
 export default HomePage

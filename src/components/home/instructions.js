@@ -60,7 +60,12 @@ class Instructions extends React.Component {
 export default Instructions;
 
 const InstItem = ({ image, order, children, last }) => (
-    <div className={`row recipe-item col-has-padding`}>
+    <div
+        className={`row recipe-item col-has-padding`}
+        data-sal="slide-down"
+        data-sal-delay="300"
+        data-sal-easing="ease-out-bounce"
+    >
         <div className="col col-2 center-xs">
             <div className="badge">{order}</div>
         </div>
