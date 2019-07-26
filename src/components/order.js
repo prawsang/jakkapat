@@ -19,11 +19,11 @@ class OrderButton extends React.Component {
                 </button>
                 <div className="popup">
                     <div className="order popup-content is-flex content">
-                        <a className="social fb center" href="https://www.facebook.com/jakkapat.thaifood/">
+                        <a className="social fb center" href="https://www.facebook.com/jakkapat.thaifood/" target="_blank">
                             <FontAwesomeIcon icon={faFacebookSquare} className="icon" />
                             <small>@jakkapat.thaifood</small>
                         </a>
-                        <a className="social line center">
+                        <a className="social line center" href="https://line.me/R/ti/p/%40jakkapat" target="_blank">
                             <FontAwesomeIcon icon={faLine} className="icon" />
                             <small>@jakkapat</small>
                         </a>

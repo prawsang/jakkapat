@@ -34,7 +34,7 @@ const Price = props => (
                         className="image is-relative neg-t-64 neg-mb-40"
                     />
                     <h1 className="has-text-shadow" style={{ marginBottom: 40 }}>สั่งซื้อได้แล้ววันนี้</h1>
-                    <div className="row col-has-padding small-padding has-text-shadow" style={{ margin: 'auto', marginBottom: 56, width: '90%' }}>
+                    <div className="row col-has-padding small-padding has-text-shadow width-90-xs" style={{ margin: 'auto auto 56' }}>
                         <div className="col col-3">
                             <div className="alpha rounded">
                                 <h5>1 ห่อ</h5>

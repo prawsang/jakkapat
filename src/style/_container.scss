@@ -229,3 +229,12 @@ img {
   max-width: 100%;
 }
 
+/* xs width */
+@media screen and (max-width: 767px) {
+  .width-90-xs {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+}
+
