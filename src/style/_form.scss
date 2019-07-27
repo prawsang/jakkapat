@@ -1,0 +1,53 @@
+.form {
+    margin-bottom: 64px;
+}
+.field {
+    &:not(:last-child) {
+        margin-bottom: 32px;
+    }
+    .label {
+        display: block;
+        margin-bottom: 8px;
+    }
+}
+.input {
+    border: 1px solid $light-gray;
+    border-radius: 8px;
+    box-shadow: none;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+    font-size: 1em;
+    padding: 0.75em 1.25em;
+    outline: none !important;
+    transition: all 0.3s ease;
+    width: 100%;
+    &:hover {
+        border-color: $gray;
+    }
+    &:active, &:focus {
+        box-shadow: 0 0 0 3px $dark-alpha;
+        border: 1px solid $gray;
+    }
+    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: $light-gray;
+        opacity: 1; /* Firefox */
+    }
+    
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $light-gray;
+    }
+    
+    &::-ms-input-placeholder { /* Microsoft Edge */
+    color: $light-gray;
+    }
+
+    &.danger {
+        border-color: $danger !important;
+        &:focus, &:active {
+            box-shadow: 0 0 0 3px $danger-alpha;
+        }
+    }
+    &.textarea {
+        min-height: 200px;
+    }
+}

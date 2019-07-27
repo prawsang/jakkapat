@@ -15,6 +15,21 @@ button, .white button {
     background-color: $accent;
     color: white;
   }
+  &.line {
+    align-items: center;
+    background-color: $line;
+    border-radius: 8px;
+    color: white !important;
+    display: flex;
+    padding: 8px 12px;
+    .icon {
+      font-size: 2em;
+      padding-right: 8px;
+    }
+    &:hover {
+      background-color: #02a52f;
+    }
+  }
 }
 .dark, .gradient {
   button {

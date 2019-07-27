@@ -3,6 +3,7 @@ import LogoLight from "../assets/logo_light.svg"
 import LogoDark from "../assets/logo_dark.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
+import { Link } from "gatsby"
 
 class Nav extends React.Component {
     state = {
@@ -22,8 +23,8 @@ class Nav extends React.Component {
                         {transparent ? <LogoLight /> : <LogoDark />}
                     </div>
                     <ul className="nav-menu">
-                        <li><a>หน้าหลัก</a></li>
-                        <li><a>ติดต่อเรา</a></li>
+                        <li><Link to="/">หน้าหลัก</Link></li>
+                        <li><Link to="/contact">ติดต่อเรา</Link></li>
                     </ul>
                 </div>
             </nav>
