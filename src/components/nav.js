@@ -20,7 +20,7 @@ class Nav extends React.Component {
                         <FontAwesomeIcon icon={faBars} />
                     </div>
                     <div className="logo">
-                        {transparent ? <LogoLight /> : <LogoDark />}
+                        <Link to="/">{transparent ? <LogoLight /> : <LogoDark />}</Link>
                     </div>
                     <ul className="nav-menu">
                         <li><Link to="/">หน้าหลัก</Link></li>
