@@ -14,13 +14,14 @@
 html {
   width: 100vw;
 }
-// @media screen and (max-width: 767px) {
-//   html {
-//     overflow-x: hidden;
-//   }
-// }
 body {
   min-height: 100vh;
   overflow-x: hidden;
   width: 100%;
+}
+.page-wrapper {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }

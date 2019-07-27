@@ -20,9 +20,13 @@ class Layout extends React.Component {
     const { transparentNav, grayFooter } = this.props;
     return (
       <React.Fragment>
-        <Nav transparent={transparentNav} />
-        {this.props.children}
-        <Footer gray={grayFooter} />
+        <div className="page-wrapper">
+          <div>
+            <Nav transparent={transparentNav} />
+            {this.props.children}
+          </div>
+          <Footer gray={grayFooter} />
+        </div>
       </React.Fragment>
     )
   }
