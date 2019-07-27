@@ -5,6 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
+
 import React from "react"
 import PropTypes from "prop-types"
 
@@ -14,6 +15,8 @@ import 'sal.js/dist/sal.css';
 
 import Nav from "../components/nav"
 import Footer from "../components/footer"
+
+require('intersection-observer');
 
 class Layout extends React.Component {
   render() {
