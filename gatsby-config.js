@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Kloris`,
-    description: `Let the nature unleash your beauty. Stay gorgeous and enhance your skin care routine with our Miracle Radiance Brightening Set.`,
+    title: `จักรพรรดิ Thai Food Supply`,
+    description: ``,
     author: `@prawsang`,
   },
   plugins: [
@@ -25,14 +25,6 @@ module.exports = {
         background_color: `#e22821`,
         theme_color: `#e22821`,
         display: `minimal-ui`,
-      },
-    },
-    {
-      resolve: "gatsby-plugin-i18n",
-      options: {
-        langKeyDefault: "en",
-        useLangKeyLayout: true,
-        prefixDefault: false,
       },
     },
     {

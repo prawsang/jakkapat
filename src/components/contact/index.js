@@ -3,11 +3,6 @@ import ContactForm from "./form"
 
 import Line from "../../assets/line.svg";
 
-import {
-    faLine,
-} from "@fortawesome/free-brands-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 class Contact extends React.Component {
     state = {
         type: 0
