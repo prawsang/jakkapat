@@ -160,14 +160,13 @@
         .chopping-board {
             margin-left: 0;
             .chopping-board-image-wrapper {
-                transform: rotate(10deg);
                 margin: auto;
                 width: 90%;
             }
         }
     }
 }
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 567px) {
     .ingr-viet-noodle .chopping-board-scroll {
         position: absolute;
         top: 0;
@@ -183,6 +182,7 @@
             position: relative;
             width: 100%;
             .chopping-board-image-wrapper {
+                transform: rotate(10deg);
                 top: 5vh;
                 width: 80%;
             }

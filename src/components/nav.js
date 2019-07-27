@@ -15,7 +15,7 @@ class Nav extends React.Component {
         return (
             <nav className={`${transparent ? "transparent" : ""}  ${showMenu ? "active" : ""}`}>
                 <div className="container">
-                    <div className="popup-back" onClick={() => this.setState({ showMenu: false })} />
+                    <div className="dismiss" onClick={() => this.setState({ showMenu: false })} />
                     <div className="hamburger" onClick={() => this.setState({ showMenu: true })}>
                         <FontAwesomeIcon icon={faBars} />
                     </div>

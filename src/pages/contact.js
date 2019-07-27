@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import keywords from "../data/keywords"
 
 const ContactPage = props => (
-    <Layout transparentNav={false}>
+    <Layout transparentNav={false} grayFooter={true}>
         <SEO title="Contact" keywords={keywords} />
         <Contact />
     </Layout>

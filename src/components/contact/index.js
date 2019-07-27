@@ -1,6 +1,8 @@
 import React from "react"
 import ContactForm from "./form"
 
+import Line from "../../assets/line.svg";
+
 import {
     faLine,
 } from "@fortawesome/free-brands-svg-icons"
@@ -28,10 +30,12 @@ class Contact extends React.Component {
                             <React.Fragment>
                                 <h5>ติดต่อทาง LINE</h5>
                                 <p>ท่านสามารถติดต่อเราทาง LINE ได้ที่ <b>@jakkapat</b> (มี @) หรือใช้ปุ่มเพิ่มเพื่อนด้านล่างนี้</p>
-                                <button className="line">
-                                    <FontAwesomeIcon className="icon" icon={faLine} />
-                                    <span>Add Friend</span>
-                                </button>
+                                <a href="https://line.me/R/ti/p/%40jakkapat">
+                                    <button className="line">
+                                        <Line className="icon" />
+                                        <span>Add Friend</span>
+                                    </button>
+                                </a>
                             </React.Fragment>
                         )}
                 </section>

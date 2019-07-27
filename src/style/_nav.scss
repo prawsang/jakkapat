@@ -18,7 +18,7 @@ nav {
         display: flex;
         a {
             align-items: center;
-            color: $accent;
+            color: $text;
             display: flex;
             justify-content: center;
             padding: 20px 30px;
@@ -73,6 +73,7 @@ nav {
             transition: left 0.3s ease;
             top: 0;
             width:  80%;
+            z-index: 999;
             a {
                 box-sizing: border-box;
                 color: $text;
@@ -87,7 +88,7 @@ nav {
             }
         }
         &.active {
-            .popup-back {
+            .dismiss {
                 display: block;
             }
             ul.nav-menu {
@@ -107,8 +108,22 @@ nav {
         }
     }
 }
+.dismiss {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+  }
 
 footer {
     padding-top: 40px;
     padding-bottom: 40px;
+    position: relative;
+    &.gray {
+        background-color: #f4f4f5;
+        color: $gray;
+    }
 }

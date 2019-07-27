@@ -16,16 +16,13 @@ import Nav from "../components/nav"
 import Footer from "../components/footer"
 
 class Layout extends React.Component {
-  state = {
-    showMenu: false,
-  }
   render() {
-    const { transparentNav } = this.props;
+    const { transparentNav, grayFooter } = this.props;
     return (
       <React.Fragment>
         <Nav transparent={transparentNav} />
         {this.props.children}
-        <Footer />
+        <Footer gray={grayFooter} />
       </React.Fragment>
     )
   }

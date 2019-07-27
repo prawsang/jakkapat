@@ -5,8 +5,8 @@ import {
     faFacebookSquare,
 } from "@fortawesome/free-brands-svg-icons"
 
-const Footer = () => (
-    <footer>
+const Footer = ({ gray }) => (
+    <footer className={gray ? "gray" : ""}>
         <div className="container content is-flex is-jc-space-between">
             <div>
                 <Logo style={{ width: 120, height: 'auto', marginBottom: 8 }} />

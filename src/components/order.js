@@ -13,7 +13,7 @@ class OrderButton extends React.Component {
         const { showPopUp } = this.state;
         return (
             <div className={`popup-wrapper up ${showPopUp ? "active" : ""} `}>
-                <div className="popup-back" onClick={() => this.setState({ showPopUp: false })} />
+                <div className="dismiss" onClick={() => this.setState({ showPopUp: false })} />
                 <button className="larger" onClick={() => this.setState({ showPopUp: !showPopUp })} style={{ padding: '0.75em 2em' }}>
                     สั่งซื้อ
                 </button>
