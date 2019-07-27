@@ -9,12 +9,6 @@ class ContactForm extends React.Component {
         message: "",
         spam: ""
     }
-    spamStyle = {
-        position: 'absolute',
-        pointerEvents: 'none',
-        borderColor: 'transparent'
-    }
-
     handleSubmit(e) {
         e.preventDefault();
     }
@@ -29,8 +23,21 @@ class ContactForm extends React.Component {
             spam
         } = this.state;
         return (
-            <form onSubmit={this.handleSubmit}>
-                <InputField value={spam} onChange={e => this.setState({ spam: e.target.value })} label="Name" name="name" />
+            <form onSubmit={this.handleSubmit} className="is-relative">
+                {/* honeypot */}
+                <div className="field field-1">
+                    <label className="label">Website</label>
+                    <input
+                        className="input"
+                        type="text"
+                        placeholder="Website"
+                        onChange={e => this.setState({ spam: e.target.value })}
+                        value={spam}
+                        name="website"
+                        tabindex="-1"
+                        autocomplete="off"
+                    />
+                </div>
                 <InputField value={name} onChange={e => this.setState({ name: e.target.value })} label="Full Name" name="fullname" />
                 <InputField value={email} onChange={e => this.setState({ email: e.target.value })} type="email" label="Email" name="email" />
                 <InputField value={phone} onChange={e => this.setState({ phone: e.target.value })} label="Phone" name="phone" />
@@ -46,8 +53,8 @@ class ContactForm extends React.Component {
 
 export default ContactForm;
 
-const InputField = ({ value, onChange, label, placeholder, type, name, className, style }) => (
-    <div className={`field ${className}`} style={style}>
+const InputField = ({ value, onChange, label, placeholder, type, name, className }) => (
+    <div className={`field ${className}`}>
         <label className="label">{label}</label>
         <input
             className="input"
@@ -60,8 +67,8 @@ const InputField = ({ value, onChange, label, placeholder, type, name, className
     </div>
 )
 
-const Textarea = ({ value, onChange, label, placeholder, type, name, className, style }) => (
-    <div className={`field ${className}`} style={style}>
+const Textarea = ({ value, onChange, label, placeholder, type, name, className }) => (
+    <div className={`field ${className}`}>
         <label className="label">{label}</label>
         <textarea
             className="input textarea"

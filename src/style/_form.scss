@@ -2,6 +2,7 @@
     margin-bottom: 64px;
 }
 .field {
+    position: relative;
     &:not(:last-child) {
         margin-bottom: 32px;
     }
@@ -10,7 +11,21 @@
         margin-bottom: 8px;
     }
 }
-.input {
+.field-1 /* spam */ {
+    position: absolute;
+    top: 0;
+    left: 0;
+    :before {
+        content: '';
+        background-color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+input, .input {
     border: 1px solid $light-gray;
     border-radius: 8px;
     box-shadow: none;
