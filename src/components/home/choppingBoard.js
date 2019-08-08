@@ -23,79 +23,72 @@ const Image = ({ name, className, style }) => (
 )
 
 class ChoppingBoard extends React.Component {
-    state = {
-        scroll: 0,
-        pageHeight: 0,
-        top: 0,
-        scale: 1
-    }
+    // state = {
+    //     scroll: 0,
+    //     pageHeight: 0,
+    //     top: 0,
+    //     scale: 1
+    // }
     // scroll: how far the element has been scrolled
     // pageHeight: viewport's height
     // top: the element's top comparing to the viewport
     // scale: scaling effect
 
-    componentDidMount() {
-        this.setState({
-            top: ReactDOM.findDOMNode(this).getBoundingClientRect().top,
-            pageHeight: document.documentElement.clientHeight,
-        });
-        this.listenToScroll = this.listenToScroll.bind(this);
-        window.addEventListener('scroll', this.listenToScroll);
+    // componentDidMount() {
+    //     this.setState({
+    //         top: ReactDOM.findDOMNode(this).getBoundingClientRect().top,
+    //         pageHeight: document.documentElement.clientHeight,
+    //     });
+    //     this.listenToScroll = this.listenToScroll.bind(this);
+    //     window.addEventListener('scroll', this.listenToScroll);
 
-        this.updateDimensions = this.updateDimensions.bind(this);
-        window.addEventListener('resize', this.updateDimensions);
-    }
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.listenToScroll)
-        window.removeEventListener("resize", this.updateDimensions);
-    }
-    updateDimensions() {
-        this.setState({
-            top: ReactDOM.findDOMNode(this).getBoundingClientRect().top + window.pageYOffset,
-            pageHeight: document.documentElement.clientHeight
-        });
-    }
-    listenToScroll() {
-        const pagePosition = window.pageYOffset;
-        const scroll = pagePosition - this.state.top;
-        const maxScroll = 4 * this.state.pageHeight - 1;
-        if (scroll < maxScroll) {
-            if (scroll > 0) {
-                this.setState({
-                    scroll,
-                    scale: (scroll * -0.1) / maxScroll + 1
-                })
-            } else {
-                this.setState({ scroll: 0 })
-            }
-        }
-    }
-    changeLights() {
-        const { scroll, pageHeight } = this.state;
-        // console.log(scroll);
-        const phase = Math.ceil((scroll) / pageHeight);
-        return "phase-" + (phase <= 4 ? phase : 4)
-        // switch (phase) {
-        //     case 0: return "tomato"
-        //     case 1: return "royalblue"
-        //     case 2: return "rebeccapurple"
-        //     case 3: return "gold"
-        //     case 4: return "gray"
-        // }
-    }
+    //     this.updateDimensions = this.updateDimensions.bind(this);
+    //     window.addEventListener('resize', this.updateDimensions);
+    // }
+    // componentWillUnmount() {
+    //     window.removeEventListener('scroll', this.listenToScroll)
+    //     window.removeEventListener("resize", this.updateDimensions);
+    // }
+    // updateDimensions() {
+    //     this.setState({
+    //         top: ReactDOM.findDOMNode(this).getBoundingClientRect().top + window.pageYOffset,
+    //         pageHeight: document.documentElement.clientHeight
+    //     });
+    // }
+    // listenToScroll() {
+    //     const pagePosition = window.pageYOffset;
+    //     const scroll = pagePosition - this.state.top;
+    //     const maxScroll = 4 * this.state.pageHeight - 1;
+    //     if (scroll < maxScroll) {
+    //         if (scroll > 0) {
+    //             this.setState({
+    //                 scroll,
+    //                 scale: (scroll * -0.1) / maxScroll + 1
+    //             })
+    //         } else {
+    //             this.setState({ scroll: 0 })
+    //         }
+    //     }
+    // }
+    // changeLights() {
+    //     const { scroll, pageHeight } = this.state;
+    //     const phase = Math.ceil((scroll) / pageHeight);
+    //     return "phase-" + (phase <= 4 ? phase : 4)
+    // }
 
     render() {
+
+        const { phase, scale } = this.props;
+
         return (
             <div
                 className="col-6 col-has-padding chopping-board-scroll"
-                // style={{ backgroundColor: this.changeLights() }}
             >
                 <div className="chopping-board">
                     <div
-                        // className="sticky-image-wrapper center chopping-board-image-wrapper"
-                    className={`sticky-image-wrapper center chopping-board-image-wrapper ${this.changeLights()}`}
+                    className={`sticky-image-wrapper center chopping-board-image-wrapper phase-${phase}`}
                     >
-                        <div style={{ transform: `scale(${this.state.scale})`, fontSize: '50%' }}>
+                        <div style={{ transform: `scale(${scale})`, fontSize: '50%' }}>
                             <Image 
                                 name="choppingBoard" 
                                 className="chopping-board-image image"
