@@ -2,14 +2,9 @@ import React from "react"
 import ChoppingBoard from "./choppingBoard"
 import Observer from '@researchgate/react-intersection-observer';
 
-const getPrintableThreshold = (ratio, range) =>
-  range.reduce((prev, curr) =>
-    Math.abs(curr - ratio) < Math.abs(prev - ratio) ? curr : prev)
-
 class Ingredients extends React.Component {
     state = {
         phase: 0,
-        threshold: 0,
     }
     handleChange = (event) => {
         const id = event.target.id;
@@ -33,9 +28,11 @@ class Ingredients extends React.Component {
                         <div className="row row-xxs is-relative is-ai-stretch is-jc-space-between sticky-scroll">
                             <ChoppingBoard phase={phase} scale="1"/>
                             <div className="col-6 col-has-padding smaller-xs is-relative">
-                                <div style={{ height: '30vh' }}/>
+                                <Observer onChange={this.handleChange} >
+                                    <div style={{ height: '30vh' }}/>
+                                </Observer>
                                 <div className="page">
-                                    <Observer onChange={this.handleChange}>
+                                    <Observer onChange={this.handleChange} >
                                         <div className="texture-1 masked" id="page-1">
                                             <h1 style={{ color: 'white' }}>ผงปรุงน้ำซุป</h1>
                                             <h3 className="p masked-item">ผงปรุงน้ำซุปสกัดจากน้ำต้มกระดูก หมู รสน้ำซุปหวานน้ำต้มกระดูกหมู  กลมกล่อม หอมและเผ็ดร้อนด้วย พริกไทยดำ</h3>
