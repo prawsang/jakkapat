@@ -8,7 +8,7 @@ import keywords from "../data/keywords"
 
 const IndexPage = props => (
   <Layout transparentNav={true}>
-    <SEO title="Home" keywords={keywords} />
+    <SEO title="หน้าหลัก" keywords={keywords} />
     <Home />
   </Layout>
 )
