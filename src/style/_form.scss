@@ -28,7 +28,7 @@
 input, .input {
     border: 1px solid $light-gray;
     border-radius: 8px;
-    box-shadow: none !important;
+    box-shadow: none;
     box-sizing: border-box;
     font-family: "Kanit", sans-serif;
     font-size: 1em;
@@ -36,6 +36,7 @@ input, .input {
     outline: none !important;
     transition: all 0.3s ease;
     width: 100%;
+    -webkit-appearance: none;
     &:hover {
         border-color: $gray;
     }
@@ -46,19 +47,20 @@ input, .input {
     &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
         color: $light-gray;
         opacity: 1; /* Firefox */
+        line-height: 1.6;
     }
     &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: $light-gray;
+        color: $light-gray;
     }
     
     &::-ms-input-placeholder { /* Microsoft Edge */
-    color: $light-gray;
+        color: $light-gray;
     }
 
     &.danger {
-        border-color: $danger !important;
+        border-color: $danger;
         &:focus, &:active {
-            box-shadow: 0 0 0 3px $danger-alpha;
+            box-shadow: 0 0 0 3px $danger-alpha !important;
         }
         &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
             color: $danger;
