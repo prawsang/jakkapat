@@ -4,7 +4,7 @@
 .field {
     position: relative;
     &:not(:last-child) {
-        margin-bottom: 32px;
+        margin-bottom: 24px;
     }
     .label {
         display: block;
@@ -47,7 +47,6 @@ input, .input {
         color: $light-gray;
         opacity: 1; /* Firefox */
     }
-    
     &:-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: $light-gray;
     }
@@ -60,6 +59,19 @@ input, .input {
         border-color: $danger !important;
         &:focus, &:active {
             box-shadow: 0 0 0 3px $danger-alpha;
+        }
+        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: $danger;
+            opacity: 0.5; /* Firefox */
+        }
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: $danger;
+            opacity: 0.5;
+        }
+        
+        &::-ms-input-placeholder { /* Microsoft Edge */
+            color: $danger;
+            opacity: 0.5;
         }
     }
     &.textarea {

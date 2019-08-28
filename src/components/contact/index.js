@@ -19,20 +19,21 @@ class Contact extends React.Component {
                     </ul>
                 </div>
                 <section className="section">
-                    {type === 0 ? (
+                    <div className={type === 0 ? "" : "is-hidden"}>
                         <ContactForm />
-                    ) : (
-                            <React.Fragment>
-                                <h5>ติดต่อทาง LINE</h5>
-                                <p>ท่านสามารถติดต่อเราทาง LINE ได้ที่ <b>@jakkapat</b> (มี @) หรือใช้ปุ่มเพิ่มเพื่อนด้านล่างนี้</p>
-                                <a href="https://line.me/R/ti/p/%40jakkapat">
-                                    <button className="line">
-                                        <Line className="icon" />
-                                        <span>Add Friend</span>
-                                    </button>
-                                </a>
-                            </React.Fragment>
-                        )}
+                    </div>
+                    <div className={type === 1 ? "" : "is-hidden"}>
+                        <React.Fragment>
+                            <h5>ติดต่อทาง LINE</h5>
+                            <p>ท่านสามารถติดต่อเราทาง LINE ได้ที่ <b>@jakkapat</b> (มี @) หรือใช้ปุ่มเพิ่มเพื่อนด้านล่างนี้</p>
+                            <a href="https://line.me/R/ti/p/%40jakkapat">
+                                <button className="line">
+                                    <Line className="icon" />
+                                    <span>Add Friend</span>
+                                </button>
+                            </a>
+                        </React.Fragment>
+                    </div>
                 </section>
             </main>
         )
