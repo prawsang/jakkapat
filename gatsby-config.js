@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `จักรพรรดิ Thai Food Supply`,
-    description: ``,
+    title: `จักรพรรดิ ไทยฟู๊ดซัพพลาย`,
+    description: `ก๋วยจั๊บญวนสูตรต้นตำรับอุบล เส้นเหนียวนุ่ม น้ำซุปหอม กลมกล่อม`,
     author: `@prawsang`,
   },
   plugins: [
