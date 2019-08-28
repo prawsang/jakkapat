@@ -34,6 +34,7 @@ class ContactForm extends React.Component {
                 .then(() => {
                     this.setState({ 
                         showSuccess: true,
+                        showError: false,
                         name: "",
                         email: "",
                         phone: "",
@@ -43,7 +44,7 @@ class ContactForm extends React.Component {
                 })
                 .catch(error => {
                     console.log(error);
-                    this.setState({ showError: true })
+                    this.setState({ showError: true, showSuccess: false })
                 });
             }
         }
