@@ -28,7 +28,7 @@
 input, .input {
     border: 1px solid $light-gray;
     border-radius: 8px;
-    box-shadow: none;
+    box-shadow: none !important;
     box-sizing: border-box;
     font-family: "Kanit", sans-serif;
     font-size: 1em;
