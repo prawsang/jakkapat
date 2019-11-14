@@ -3,8 +3,10 @@ module.exports = {
     title: `จักรพรรดิ ไทยฟู๊ดซัพพลาย`,
     description: `ก๋วยจั๊บญวนสูตรต้นตำรับอุบล เส้นเหนียวนุ่ม น้ำซุปหอม กลมกล่อม`,
     author: `@prawsang`,
+    siteUrl: `https://www.jakkapat-thaifood.com`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
