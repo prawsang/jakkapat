@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import Observer from '@researchgate/react-intersection-observer';
 import ReactDOM from "react-dom";
 
-const Image = ({ name, className, style }) => (
+const Image = ({ name, className, style, alt }) => (
     <StaticQuery
         query={graphql`
         query {
@@ -18,6 +18,7 @@ const Image = ({ name, className, style }) => (
                 fluid={data[name].childImageSharp.fluid}
                 className={className}
                 style={style}
+                alt={alt}
             />
         )}
     />
@@ -80,6 +81,7 @@ class ChoppingBoard extends React.Component {
                                 <Image 
                                     name="choppingBoard" 
                                     className="chopping-board-image image"
+                                    alt="ส่วนผสม ก๋วยจั๊บญวน"
                                 />
                                 <div className="light-circle light-1" />
                                 <div className="light-circle light-2" />

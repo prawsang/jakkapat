@@ -30,15 +30,18 @@ class Hero extends React.Component {
             <div className="container narrow center padding-top is-relative">
               <HeroHead
                 className="hero-head image"
+                alt="ก๋วยจั๊บญวน สูตรต้นตำรับอุบล"
                 data-sal="slide-up"
                 data-sal-easing="ease-out-bounce"
               />
               <Img
                 fluid={data.header.childImageSharp.fluid}
                 className="image hero-image"
+                alt="ก๋วยจั๊บญวน สูตรต้นตำรับอุบล"
               />
               <HeroDet
                 className="image hero-details"
+                alt="เส้นเหนียวนุ่ม น้ำซุปกลมกล่อม"
                 data-sal="slide-up"
                 data-sal-delay="300"
                 data-sal-easing="ease-out-bounce"

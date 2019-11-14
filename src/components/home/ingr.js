@@ -35,7 +35,7 @@ class Ingredients extends React.Component {
                                     <Observer onChange={this.handleChange} >
                                         <div className="texture-1 masked" id="page-1">
                                             <h1 style={{ color: 'white' }}>ผงปรุงน้ำซุป</h1>
-                                            <h3 className="p masked-item">ผงปรุงน้ำซุปสกัดจากน้ำต้มกระดูก หมู รสน้ำซุปหวานน้ำต้มกระดูกหมู  กลมกล่อม หอมและเผ็ดร้อนด้วย พริกไทยดำ</h3>
+                                            <h3 className="p masked-item">ผงปรุงน้ำซุปก๋วยจั๊บญวนของเรา สกัดจากน้ำต้มกระดูก หมู รสน้ำซุปหวานน้ำต้มกระดูกหมู  กลมกล่อม หอมและเผ็ดร้อนด้วย พริกไทยดำ</h3>
                                         </div>
                                     </Observer>
                                 </div>
@@ -43,7 +43,7 @@ class Ingredients extends React.Component {
                                     <Observer onChange={this.handleChange}>
                                         <div className="texture-1 masked" id="page-2">
                                             <h1 style={{ color: 'white' }}>เส้นสด</h1>
-                                            <h3 className="p masked-item">เส้นสดจากอุบลแท้ เหนียวนุ่ม</h3>
+                                            <h3 className="p masked-item">เส้นก๋วยจั๊บญวนสดจากอุบลแท้ เหนียวนุ่ม</h3>
                                         </div>
                                     </Observer>
                                 </div>
